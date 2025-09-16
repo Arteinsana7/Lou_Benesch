@@ -4,7 +4,7 @@ Lou est une artiste autodidacte qui propose du merch autour de ses œuvres. Sur 
 
 ## Fonctionnalités implémentées
 
-- Barre de navigation
+- Barre de navigation & mobile responsive
 - Page d'accueil
 - Page boutique
 - Page produit customisable
