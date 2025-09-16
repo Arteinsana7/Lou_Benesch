@@ -222,7 +222,6 @@ main h1 {
     font-family: 'Manrope', sans-serif;
      padding-bottom: 5px;
 
-
 }
 
 main h2 {
@@ -356,4 +355,28 @@ footer .icons img{
   margin-top: 50px;
   margin-bottom: 0;
   font-family: 'Manrope', sans-serif;
+
+}
+.products-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.products-list li {
+  display: flex;
+  flex-direction: column; /* image au-dessus, texte en dessous */
+  align-items: center;     /* centre image + texte */
+  text-align: center;
+}
+
+
+.products-list img {
+  width: 150px;   /* fixe une largeur */
+  height: auto;   /* conserve les proportions */
+  border-radius: 8px;
+  object-fit: contain; /* pas de coupe, l'image entière est affichée */
 }
