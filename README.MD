@@ -15,3 +15,7 @@ Lou est une artiste autodidacte qui propose du merch autour de ses œuvres. Sur 
 - Custom properties : couleur et espacement
 
 ## Points en cours/à finaliser
+
+- Page d'accueil à finaliser
+- Responsive
+- Page galerie d'art, contact, panier
