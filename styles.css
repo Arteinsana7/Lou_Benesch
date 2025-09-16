@@ -358,25 +358,25 @@ footer .icons img{
 
 }
 .products-list {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .products-list li {
-  display: flex;
-  flex-direction: column; /* image au-dessus, texte en dessous */
-  align-items: center;     /* centre image + texte */
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 150px; /* taille fixe pour chaque produit */
+    text-align: center;
 }
 
-
 .products-list img {
-  width: 150px;   /* fixe une largeur */
-  height: auto;   /* conserve les proportions */
-  border-radius: 8px;
-  object-fit: contain; /* pas de coupe, l'image entière est affichée */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
