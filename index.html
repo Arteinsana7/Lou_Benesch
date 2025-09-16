@@ -8,7 +8,7 @@
 </head>
 <body>
         <header id="navbar">
-        <nav>
+        <nav class="navbar desktop">
             <div class="contenu-logo-entreprise">
                 <img src="./assets/logo-entreprise.png" alt="Logo Loup">
             </div>
@@ -39,6 +39,22 @@
                     </a>
                 </li>
             </ul>
+        </nav>
+
+        <nav class="navbar mobile">
+            <div><img src="./assets/logo-entreprise.png" alt="Logo Loup"></div>
+            <div class="conteneur-gros-titre">Lou Benesch</div>
+            <svg class="burger-icon" id="burgerBtn" width="36" height="30" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor:pointer;">
+                <path d="M0 12V10H18V12H0ZM0 7V5H18V7H0ZM0 2V0H18V2H0Z" fill="#625E49"/>
+            </svg>
+            <div id="mobile-menu">
+                <ul>
+                    <li><a href="pages/gallery.html">Galerie d'art</a></li>
+                    <li><a href="pages/shop.html">Boutique</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><a href="pages/cart.html">Panier</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 </body>

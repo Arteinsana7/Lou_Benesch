@@ -20,8 +20,10 @@ header img {
 }
 .conteneur-gros-titre{
     
-    text-transform: uppercase;
-    font-size: 3em;
+  text-transform: uppercase;
+  font-size: 3em;
+  white-space: pre-line;
+  text-align: center;
 }
 
 nav {
@@ -73,4 +75,52 @@ nav ul li a {
     width: 30px;
     height: 30px;
 }
+ .navbar.desktop {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    min-width: 320px;
+    max-width: 100vw;
+    height: 150px;
+}
 
+body {
+  padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+.navbar.desktop {
+    display: none;
+}
+
+.navbar.mobile {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 20px;
+}
+.conteneur-gros-titre{
+    font-size: 2.5em;
+    white-space: pre-line;
+    text-align: left;
+}
+
+}
+
+@media (min-width: 769px) {
+.navbar.mobile {
+    display: none;
+}
+
+}
+
+#mobile-menu {
+    display: none
+}
