@@ -124,3 +124,72 @@ body {
 #mobile-menu {
     display: none
 }
+
+
+.personnalisation{
+  margin-top: 30px;
+  width: 400px;
+}
+.theteskeybrothers{
+    text-transform: uppercase;
+    font-size: 3em;
+}
+.produit_descriptif{
+  display: flex;
+}
+.photo-illustration{
+  width: 35%;
+  margin-top: 30px;
+  margin-left: 2%;
+  margin-right: 5%;
+}
+.photo-illustration img{
+  width: 100%;
+}
+.descriptif-produit{
+  margin-top: 3%;
+}
+.options-personnalisation{
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.menu-row {
+      display: flex;          /* les éléments s’affichent sur la même ligne */
+      gap: 20px;              /* espace entre les menus */
+}
+.menu-déroulant{
+  margin-top: 20px;
+}
+select{
+  border-radius: 8px;
+  width: 110px;
+}
+
+.prix-quantite{
+  margin-top: 200px;
+  display: flex;
+  gap: 20px;
+  flex: 1; /* les deux colonnes prennent la même largeur */
+  padding: 15px;
+  border-radius: 6px;
+}
+.prix, .quantite {
+  flex: 1; /* les deux colonnes prennent la même largeur */
+  border-radius: 6px;
+}
+
+.quantite{
+  text-align: right;
+  margin-right: 4px;
+}
+button{
+  background-color: gray;
+  text-align: center;
+  color: white;
+  width: 400px;
+  height:50px;
+  margin-top: 30px;
+}
+
+
