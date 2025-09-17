@@ -1,0 +1,69 @@
+@charset "utf-8";
+.open-sans- {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+.tous-les-produits{
+    margin-top: 2%;
+    margin-left: 2%;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+.contact-formulaire{
+  display: flex;
+  flex: 1;
+}
+.contact{
+  width:15%;
+  margin-left: 9%;
+  margin-right: 200px;
+  text-align: center;
+}
+
+.formulaire{
+  margin-top: 35px;
+}
+.nom-prenom{
+  display:flex;
+  flex: 1;
+}
+label{
+  margin:5px;
+}
+input, textarea {
+    border: 1px solid #ccc;      /* bordure grise */
+    border-radius: 8px;          /* arrondit les coins */
+    padding: 8px;                /* espace interne */
+    width: 100%;                /* largeur fixe */
+}
+.tel-mail{
+  display:flex;
+  flex: 1;
+  margin-top: 30px;
+}
+.conteneur-message{
+  margin-top: 30px;
+}
+#message {   
+  height: 150px;     /* plus haut que les champs normaux */
+  resize: vertical;  /* redimensionnable seulement en hauteur */
+}
+textarea{
+  margin-top: 10px;
+  width: 97%;
+}
+.btn-envoyer{
+  background-color: gray;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height:50px;
+  margin-top: 30px;
+}

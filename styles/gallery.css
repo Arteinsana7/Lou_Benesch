@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.open-sans- {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.tous-les-produits{
+    margin-top: 2%;
+    margin-left: 2%;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* retour à la ligne automatique */
+  gap: 50px; /* espace entre les blocs */
+  margin: 30px;
+}
+.container div {
+  flex: 1 1 calc(22% - 10px); /* 3 images par ligne */
+}
+.container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
