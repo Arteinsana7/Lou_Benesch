@@ -222,6 +222,7 @@ main h1 {
     font-family: 'Manrope', sans-serif;
      padding-bottom: 5px;
 
+
 }
 
 main h2 {
@@ -366,17 +367,26 @@ footer .icons img{
     margin: 0;
 }
 
-.products-list li {
+.product {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: left;
     gap: 10px;
-    width: 150px; /* taille fixe pour chaque produit */
-    text-align: center;
+    background-color: #f8f8f8; /* optionnel, pour voir le bloc */
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    
 }
 
-.products-list img {
+.product img {
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
     border-radius: 8px;
+}
+
+.product:hover {
+    transform: translateY(-5px); 
 }
