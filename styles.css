@@ -90,14 +90,12 @@ nav ul li a {
     height: 150px;
 }
 
-body {
-  padding-top: 100px;
-}
 
 @media (max-width: 768px) {
 .navbar.desktop {
     display: none;
 }
+
 
 .navbar.mobile {
     display: flex;
@@ -117,6 +115,9 @@ body {
 @media (min-width: 769px) {
 .navbar.mobile {
     display: none;
+}
+body {
+  padding-top: 100px;
 }
 
 }
