@@ -1,34 +1,32 @@
 @media (max-width: 768px) {
-.navbar.desktop {
+  .navbar.desktop {
     display: none;
-}
+  }
 
-
-.navbar.mobile {
+  .navbar.mobile {
     display: flex;
     justify-content: space-between;
     gap: 10px;
     align-items: center;
     padding: 10px 20px;
-}
-.conteneur-gros-titre{
+  }
+  .conteneur-gros-titre {
     font-size: 2.5em;
     white-space: pre-line;
     text-align: left;
-}
-
+  }
 }
 
 @media (min-width: 769px) {
-.navbar.mobile {
+  .navbar.mobile {
     display: none;
-}
-body {
-  padding-top: 100px;
-}
+  }
 
+  body {
+    padding-top: 100px;
+  }
 }
 
 #mobile-menu {
-    display: none
+  display: none;
 }
