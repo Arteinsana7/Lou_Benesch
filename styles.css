@@ -46,20 +46,19 @@ nav ul li a {
   color: black; /* ou ta couleur */
   font-weight: bold;
 }
-
+/* 
 .tous-les-produits{
     margin-top: 2%;
     margin-left: 2%;
     text-transform: uppercase;
     font-size: 3em;
-}
+} */
 
+/* 
 .container {
   display: flex;
   flex-wrap: wrap; /* retour à la ligne automatique */
-  gap: 50px; /* espace entre les blocs */
-  margin: 30px;
-}
+
 
 .container div {
   flex: 1 1 calc(22% - 10px); /* 3 images par ligne */
@@ -91,7 +90,7 @@ nav ul li a {
 }
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 .navbar.desktop {
     display: none;
 }
@@ -110,9 +109,9 @@ nav ul li a {
     text-align: left;
 }
 
-}
+} */
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
 .navbar.mobile {
     display: none;
 }
@@ -124,7 +123,7 @@ body {
 
 #mobile-menu {
     display: none
-}
+} */
 
 
 .personnalisation{
