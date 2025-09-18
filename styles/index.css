@@ -1,6 +1,12 @@
 @charset "utf-8";
-:root {
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables globales */
+:root {
   --color-primary: rgb(209, 175, 14);
   --color-primary-hover: rgba(113, 166, 194, 0.76);
   --color-text-white: #ffffff;
@@ -13,29 +19,32 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
- 
-  --max-width-main: 1280px;
-  --padding-main: 20px;
-  --margin-main: 60px;
-  --gap-products: 30px;
-  --gap-icons: 30px;
-  --product-height: 300px;
-  --image-container-height: 640px;
-  --btn-padding: 15px 40px;
-  --btn-radius: 10px;
-  --btn-font-size: 12px;
+  /* Layout */
+  --max-width-main: min(100%, 1280px);
+  --padding-main: clamp(1rem, 5vw, 2rem);
+  --margin-main: clamp(2rem, 20vh, 4rem);
+  --gap-products: clamp(1rem, 3vw, 2rem);
+  --gap-icons: clamp(1rem, 4vw, 2rem);
+
+  /* Composants */
+  --product-height: clamp(200px, 25vw, 300px);
+  --image-container-height: clamp(300px, 60vh, 640px);
+
+  /*  Boutons */
+  --btn-padding: 1rem 2.5rem;
+  --btn-radius: 0.5rem;
+  --btn-font-size: clamp(0.8rem, 1vw, 1rem);
 
 
-  --h1-font-size: 3em;
-  --h2-font-size: 1.2em;
-  --title-produits-font-size: 2em;
-  --descriptif-font-size: 1em;
+  --h1-font-size: clamp(2rem, 5vw, 3em);
+  --h2-font-size: clamp(1rem, 2.5vw, 1.5em);
+  --title-produits-font-size: clamp(1.5rem, 4vw, 2em);
+  --descriptif-font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
-
 
 .main {
   max-width: var(--max-width-main);
-  margin: var(--margin-main);
+  margin: var(--margin-main) auto;
   display: flex;
   flex-direction: column;
   padding: 0 var(--padding-main);
@@ -47,7 +56,7 @@ main h1 {
   font-size: var(--h1-font-size);
   text-transform: uppercase;
   font-family: var(--font-main);
-  padding-bottom: 5px;
+  padding-bottom: 0.3rem;
 }
 
 main h2 {
@@ -55,17 +64,18 @@ main h2 {
   width: 100%;
   font-size: var(--h2-font-size);
   font-family: var(--font-main);
-  padding-bottom: 30px;
+  padding-bottom: 2rem;
 }
+
 
 .image-container {
   display: flex;
-  width: var(--max-width-main);
+  width: 100%;
   height: var(--image-container-height);
-  margin: 0 auto 50px auto;
+  margin: 0 auto 3rem auto;
   overflow: hidden;
   position: relative;
-  border-radius: 10px;
+  border-radius: 0.5rem;
 }
 
 .image-container img {
@@ -75,19 +85,19 @@ main h2 {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 10px;
+  border-radius: 0.5rem;
 }
 
-
+/* Grille Produits */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: var(--gap-products);
   width: 100%;
   max-width: var(--max-width-main);
   justify-content: start;
   font-family: var(--font-main);
-  margin-top: 35px;
+  margin-top: 2rem;
 }
 
 .product {
@@ -95,10 +105,10 @@ main h2 {
   flex-direction: column;
   align-items: center;
   text-align: left;
-  gap: 10px;
+  gap: 0.5rem;
   background-color: var(--color-product-bg);
-  padding: 10px;
-  border-radius: 8px;
+  padding: 1rem;
+  border-radius: 0.5rem;
   transition: transform 0.3s;
 }
 
@@ -106,7 +116,7 @@ main h2 {
   width: 100%;
   height: var(--product-height);
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .product:hover {
@@ -127,16 +137,17 @@ main h2 {
   font-family: var(--font-main);
   font-weight: var(--font-weight-light);
   color: var(--color-text-grey);
-  margin-top: 3px;
+  margin-top: 0.2rem;
   text-align: center;
-}
+} 
 
 
+/* 🔘 Bouton Voir plus */
 .btn-details {
   display: grid;
   place-items: center;
   cursor: pointer;
-  margin: 80px auto;
+  margin: 5rem auto;
   padding: var(--btn-padding);
   font-size: var(--btn-font-size);
   border-radius: var(--btn-radius);
@@ -154,7 +165,7 @@ main h2 {
   color: var(--color-text-white);
 }
 
-
+/* 📌 Footer */
 .footer-links {
   display: flex;
   justify-content: center;
@@ -163,8 +174,8 @@ main h2 {
 }
 
 footer .icons img {
-  width: 40px;
-  height: 40px;
+  width: clamp(30px, 5vw, 40px);
+  height: clamp(30px, 5vw, 40px);
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -172,7 +183,7 @@ footer .icons img {
 .footer {
   background-color: var(--color-footer-bg);
   text-align: center;
-  padding: 40px 0;
-  margin-top: 50px;
+  padding: 2.5rem 0;
+  margin-top: 3rem;
   font-family: var(--font-main);
 }
