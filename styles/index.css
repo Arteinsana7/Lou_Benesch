@@ -14,7 +14,7 @@ body {
   --color-product-bg: #f8f8f8;
   --color-footer-bg: #f0f2c7;
 
-  --font-main: 'Manrope', sans-serif;
+  --font-main: "Manrope", sans-serif;
   --font-weight-light: 300;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
@@ -34,7 +34,8 @@ body {
   --btn-padding: 1rem 2.5rem;
   --btn-radius: 0.5rem;
   --btn-font-size: clamp(0.8rem, 1vw, 1rem);
-
+  --btn-background-color: #625e49;
+  --btn-background-color-hover: #9f9a81;
 
   --h1-font-size: clamp(2rem, 5vw, 3em);
   --h2-font-size: clamp(1rem, 2.5vw, 1.5em);
@@ -66,7 +67,6 @@ main h2 {
   font-family: var(--font-main);
   padding-bottom: 2rem;
 }
-
 
 .image-container {
   display: flex;
@@ -139,8 +139,7 @@ main h2 {
   color: var(--color-text-grey);
   margin-top: 0.2rem;
   text-align: center;
-} 
-
+}
 
 /* 🔘 Bouton Voir plus */
 .btn-details {

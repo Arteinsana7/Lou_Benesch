@@ -1,4 +1,8 @@
 class CartManager {
+  // Retourne le panier courant
+  getCart() {
+    return this.cart;
+  }
   constructor() {
     this.cartKey = "cart";
     this.cart = this.loadCart();
@@ -20,6 +24,8 @@ class CartManager {
   loadCart() {
     try {
       const savedCart = localStorage.getItem(this.cartKey);
+
+      console.log("Panier chargé:", JSON.parse(savedCart));
       return savedCart ? JSON.parse(savedCart) : [];
     } catch (error) {
       console.error("Erreur lors du chargement du panier:", error);
@@ -197,6 +203,7 @@ class CartManager {
     const existingRows = cartTable.querySelectorAll(
       "tr:not(.cart-items-header):not(.cart-total)"
     );
+
     existingRows.forEach((row) => row.remove());
 
     // Si le panier est vide
@@ -221,8 +228,6 @@ class CartManager {
       return;
     }
 
-    // Afficher les articles du panier
-    const totalRow = cartTable.querySelector(".cart-total");
     this.cart.forEach((item) => {
       const row = document.createElement("tr");
       row.className = "cart-items";
@@ -265,12 +270,9 @@ class CartManager {
       cartTable.appendChild(row);
     });
 
-    // Mettre à jour le total
-    const totalPriceElement = cartTable.querySelector(
-      ".cart-total td:last-child"
-    );
-    if (totalPriceElement) {
-      totalPriceElement.textContent = `${this.getTotalPrice().toFixed(2)}€`;
+    const totalPriceSpan = document.getElementById('total-price');
+    if (totalPriceSpan) {
+      totalPriceSpan.textContent = `${this.getTotalPrice().toFixed(2)}€`;
     }
 
     // Afficher le bouton de validation
@@ -281,10 +283,10 @@ class CartManager {
 
     // Ajouter un bouton de vidage pour les tests (après le bouton checkout)
     const checkoutContainer = document.querySelector(".checkout-container");
-    if (checkoutContainer && !document.getElementById("clear-cart-btn")) {
+    if (checkoutContainer && !document.getElementById(".clear-cart-btn")) {
       const clearButton = document.createElement("button");
       clearButton.id = "clear-cart-btn";
-      clearButton.textContent = "Vider le panier (test)";
+      clearButton.textContent = "Vider le panier";
       clearButton.style.cssText = `
                 margin-left: 15px;
                 padding: 15px 20px;
