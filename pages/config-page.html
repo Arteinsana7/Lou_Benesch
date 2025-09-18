@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>projet-dev-page-ecv</title>
+    <title>Configuration Produit - Lou Benesch</title>
 
     <link rel="stylesheet" href="../styles/config-page.css" />
     <link rel="stylesheet" href="../styles.css" />
@@ -95,11 +95,18 @@
           </div>
         </nav>
       </header>
+      
       <div class="produit_descriptif">
-        <div class="photo-illustration" id="photo-illustration"></div>
+        <div class="photo-illustration" id="photo-illustration">
+          <!-- L'image du produit sera chargée ici -->
+        </div>
         <div class="personnalisation">
-          <div class="theteskeybrothers open-sans-" id="title-product"></div>
-          <div class="descriptif-produit" id="description-product"></div>
+          <div class="theteskeybrothers open-sans-" id="title-product">
+            <!-- Le nom du produit sera chargé ici -->
+          </div>
+          <div class="descriptif-produit" id="description-product">
+            <!-- La description sera chargée ici -->
+          </div>
           <div class="options-personnalisation">
             Options de personnalisation
           </div>
@@ -108,43 +115,43 @@
             style="margin: 0; padding: 0; border: 0; background: none"
           >
             <div class="menu-deroulant menu-row">
-              <select id="dropdown-choices" name="support">
-                <option selected disabled>Support</option>
-                <option>T-Shirt</option>
-                <option>Agenda</option>
+              <select id="dropdown-choices" name="support" required>
+                <option value="" selected disabled>Support</option>
+                <option value="T-Shirt">T-Shirt</option>
+                <option value="Agenda">Agenda</option>
               </select>
 
-              <select name="color">
-                <option selected disabled>Coloris</option>
-                <option>Noir</option>
-                <option>Blanc</option>
-                <option>Beige</option>
+              <select name="color" required>
+                <option value="" selected disabled>Coloris</option>
+                <option value="Noir">Noir</option>
+                <option value="Blanc">Blanc</option>
+                <option value="Beige">Beige</option>
               </select>
 
-              <select name="size">
-                <option selected disabled>Taille</option>
-                <option>XS</option>
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
+              <select name="size" required>
+                <option value="" selected disabled>Taille</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
               </select>
             </div>
             <div class="prix-quantite">
-              <div class="prix" id="product-price"></div>
+              <div class="prix" id="product-price">Sélectionnez un support</div>
               <div class="quantite">
                 <select id="quantity-select" name="quantity">
-                  <option selected disabled>Quantité</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
+                  <option value="" selected disabled>Quantité</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
                 </select>
               </div>
             </div>
@@ -154,12 +161,33 @@
             Informations du support
           </div>
           <div class="texte-info-supports">
-            Subheading that sets up context, shares more info about the website,
-            or generally gets people psyched to keep scrolling.
+            Choisissez parmi nos supports de qualité pour donner vie à vos illustrations préférées. 
+            T-shirts en coton premium ou agendas avec papier de qualité supérieure.
           </div>
+          
+          <!-- Section de débogage (à retirer en production)
+          <div style="margin-top: 30px; padding: 15px; background: #f5f5f5; border-radius: 5px;">
+            <h4>Debug Info:</h4>
+            <button type="button" onclick="window.debugConfigPage()" style="padding: 5px 10px;">
+              Afficher infos debug
+            </button>
+            <p><small>URL actuelle: <span id="current-url"></span></small></p>
+          </div> -->
         </div>
       </div>
     </main>
-    <script type="module" src="../configProduct.js"></script>
+    
+    <!-- IMPORTANT: Charger cart.js AVANT configProduct.js -->
+  <script src="../cart.js"></script>
+<script type="module" src="../configProduct.js"></script>
+    <script>
+      // Afficher l'URL actuelle pour le debug
+      document.addEventListener('DOMContentLoaded', function() {
+        const urlElement = document.getElementById('current-url');
+        if (urlElement) {
+          urlElement.textContent = window.location.href;
+        }
+      });
+    </script> 
   </body>
 </html>
