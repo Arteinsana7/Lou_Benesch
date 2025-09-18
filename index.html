@@ -102,22 +102,17 @@
 
   </div>
 </div>
- 
-</main>
 <div>
 <button class="btn-details" onclick="location.href='#'">Voir plus</button>
-</div> 
+</div>  
+</main>
   </div>
 </div>
-
+</main>
   <script src="script.js"></script>
-  <footer class="footer">
-    <div class="footer-links">
-      <div class="icons" onclick="location.href='#'"><img src="./assets/icons8-facebook-nouveau-50.svg" alt="facebook"></div>
-      <div class="icons" onclick="location.href='#'"><img src="./assets/icons8-instagram-50.svg" alt="insta"></div>
-      <div class="icons" onclick="location.href='#'"><img src="./assets/icons8-tic-tac-50.svg" alt="tiktok"></div>
-    </div>
-    <p>&copy; 2025 Lou Benesch. Tous droits réservés.</p>
-  </footer>
+  <script type="module">
+  import { createFooter } from './components/Footer.js';
+  createFooter();
+</script>
 </body>
 </html>

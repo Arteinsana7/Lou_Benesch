@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/index.css">
+
     <link rel="stylesheet" href="../mediaqueries.css">
     <link rel="stylesheet" href="../styles/cart.css">
-    
 
+<main class="main open-sans-"> 
     <title>Mon Panier</title>
 </head>
 <body>
@@ -100,13 +102,10 @@
         </div>
 
     </main>
+    <script type="module">
+  import { createFooter } from '../components/Footer.js';
+  createFooter();
+</script>
 </body>
-<footer class="footer">
-    <div class="footer-links">
-      <div class="icons" onclick="location.href='#'"><img src="../assets/icons8-facebook-nouveau-50.svg" alt="facebook"></div>
-      <div class="icons" onclick="location.href='#'"><img src="../assets/icons8-instagram-50.svg" alt="insta"></div>
-      <div class="icons" onclick="location.href='#'"><img src="../assets/icons8-tic-tac-50.svg" alt="tiktok"></div>
-    </div>
-    <p>&copy; 2025 Lou Benesch. Tous droits réservés.</p>
-  </footer>
+
 </html>
