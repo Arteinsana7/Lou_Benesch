@@ -1,70 +1,73 @@
-import THE_DANCE from "./assets/Dance.svg";
-import THE_DRESS from "./assets/Dress.svg";
-import SING from "./assets/Sing.svg";
-import GAME from "./assets/Game.svg";
-import THE_KISS from "./assets/Kiss.svg";
-
-import DANSE_AGENDA from "./assets/produits/danse-agenda.jpg";
-import DRESS_AGENDA from "./assets/produits/dress-agenda.jpg";
-import GAME_AGENDA from "./assets/produits/game-agenda.jpg";
-import KISS_AGENDA from "./assets/produits/kiss-agenda.jpg";
-import SING_AGENDA from "./assets/produits/sing-agenda.jpg";
+// agenda
+const agendaProducts = [
+  "./assets/produits/danse-agenda.jpg",
+  "./assets/produits/dress-agenda.jpg",
+  "./assets/produits/game-agenda.jpg",
+  "./assets/produits/kiss-agenda.jpg",
+  "./assets/produits/sing-agenda.jpg",
+];
 
 //T-SHIRTS BLANCS
-import DANSE_BLANC from "./assets/produits/danse-blanc.jpg";
-import DRESS_BLANC from "./assets/produits/danse-blanc.jpg";
-import GAME_BLANC from "./assets/produits/danse-blanc.jpg";
-import KISS_BLANC from "./assets/produits/danse-blanc.jpg";
-import SING_BLANC from "./assets/produits/danse-blanc.jpg";
+const tshirtBlancProducts = [
+  "./assets/produits/danse-blanc.jpg",
+  "./assets/produits/dress-blanc.jpg",
+  "./assets/produits/game-blanc.jpg",
+  "./assets/produits/kiss-blanc.jpg",
+  "./assets/produits/sing-blanc.jpg",
+];
 
 //T-SHIRTS NOIRS
-import DANSE_NOIR from "./assets/produits/danse-noir.jpg";
-import DRESS_NOIR from "./assets/produits/danse-noir.jpg";
-import GAME_NOIR from "./assets/produits/danse-noir.jpg";
-import KISS_NOIR from "./assets/produits/danse-noir.jpg";
-import SING_NOIR from "./assets/produits/danse-noir.jpg";
+const tshirtNoirProducts = [
+  "./assets/produits/danse-noir.jpg",
+  "./assets/produits/dress-noir.jpg",
+  "./assets/produits/game-noir.jpg",
+  "./assets/produits/kiss-noir.jpg",
+  "./assets/produits/sing-noir.jpg",
+];
 
 //T-SHIRTS JAUNES
-import DANSE_JAUNE from "./assets/produits/danse-jaune.jpg";
-import DRESS_JAUNE from "./assets/produits/danse-jaune.jpg";
-import GAME_JAUNE from "./assets/produits/danse-jaune.jpg";
-import KISS_JAUNE from "./assets/produits/danse-jaune.jpg";
-import SING_JAUNE from "./assets/produits/danse-jaune.jpg";
+const tshirtJauneProducts = [
+  "./assets/produits/danse-jaune.jpg",
+  "./assets/produits/dress-jaune.jpg",
+  "./assets/produits/game-jaune.jpg",
+  "./assets/produits/kiss-jaune.jpg",
+  "./assets/produits/sing-jaune.jpg",
+];
 
 const products = [
   {
     id: 1,
     name: "The Dance",
     price: "-",
-    image: [THE_DANCE],
+    image: ["../assets/Dance.svg"],
     quantity: 1,
   },
   {
     id: 2,
     name: "The Dress",
     price: "-",
-    image: [THE_DRESS],
+    image: ["../assets/The-Dress.svg"],
     quantity: 1,
   },
   {
     id: 3,
     name: "Sing",
     price: "-",
-    image: [SING],
+    image: ["../assets/Sing.svg"],
     quantity: 1,
   },
   {
     id: 4,
     name: "Game",
     price: "-",
-    image: [GAME],
+    image: ["../assets/Game.svg"],
     quantity: 1,
   },
   {
     id: 5,
     name: "The Kiss",
     price: "-",
-    image: [THE_KISS],
+    image: ["../assets/The-Kiss.svg"],
     quantity: 1,
   },
 ];
@@ -72,42 +75,24 @@ const products = [
 const supports = {
   tshirt: {
     sizes: ["XS", "S", "M", "L", "XL"],
-    colors: ["Noir", "Blanc", "Beige"],
+    colors: ["Noir", "Blanc", "Jaune"],
     price: 24.99,
   },
   agenda: {
     sizes: ["A5", "A6"],
-    colors: ["Noir", "Blanc", "Jaune"],
+    colors: ["Bleu", "Blanc", "Jaune"],
     price: 19.99,
   },
 };
 
 const variants = {
   tshirt: {
-    Noir: ["DANSE_NOIR", "DRESS_NOIR", "GAME_NOIR", "KISS_NOIR", "SING_NOIR"],
-    Blanc: [
-      "DANSE_BLANC",
-      "DRESS_BLANC",
-      "GAME_BLANC",
-      "KISS_BLANC",
-      "SING_BLANC",
-    ],
-    Jaune: [
-      "DANSE_JAUNE",
-      "DRESS_JAUNE",
-      "GAME_JAUNE",
-      "KISS_JAUNE",
-      "SING_JAUNE",
-    ],
+    Noir: tshirtNoirProducts,
+    Blanc: tshirtBlancProducts,
+    Jaune: tshirtJauneProducts,
   },
   agenda: {
-    design: [
-      "DANSE_AGENDA",
-      "DRESS_AGENDA",
-      "GAME_AGENDA",
-      "KISS_AGENDA",
-      "SING_AGENDA",
-    ],
+    design: agendaProducts,
   },
 };
 
