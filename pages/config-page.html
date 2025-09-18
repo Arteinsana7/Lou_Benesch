@@ -7,8 +7,8 @@
     <title>projet-dev-page-ecv</title>
 
     <link rel="stylesheet" href="../styles/config-page.css" />
-    <link rel="stylesheet" href="../mediaqueries.css" />
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../mediaqueries.css" />
     <!-- On intègre des Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -96,65 +96,60 @@
         </nav>
       </header>
       <div class="produit_descriptif">
-        <div class="photo-illustration">
-          <img
-            src="../assets/Illustration_1.png"
-            alt="the teskey brothers illustration"
-          />
-        </div>
+        <div class="photo-illustration" id="photo-illustration"></div>
         <div class="personnalisation">
-          <div class="theteskeybrothers open-sans-">the teskey brothers</div>
-          <div class="descriptif-produit">
-            Body text for describing what this product is and why this product
-            is simply a must-buy.
-          </div>
+          <div class="theteskeybrothers open-sans-" id="title-product"></div>
+          <div class="descriptif-produit" id="description-product"></div>
           <div class="options-personnalisation">
             Options de personnalisation
           </div>
-          <div class="menu-deroulant menu-row">
-            <select>
-              <option selected disabled>Support</option>
-              <option>Sweat-shirt</option>
-              <option>T-Shirt</option>
-              <option>Mug</option>
-              <option>Agenda</option>
-            </select>
+          <form
+            id="product-config-form"
+            style="margin: 0; padding: 0; border: 0; background: none"
+          >
+            <div class="menu-deroulant menu-row">
+              <select id="dropdown-choices" name="support">
+                <option selected disabled>Support</option>
+                <option>T-Shirt</option>
+                <option>Agenda</option>
+              </select>
 
-            <select>
-              <option selected disabled>Coloris</option>
-              <option>Noir</option>
-              <option>Blanc</option>
-              <option>Beige</option>
-            </select>
+              <select name="color">
+                <option selected disabled>Coloris</option>
+                <option>Noir</option>
+                <option>Blanc</option>
+                <option>Beige</option>
+              </select>
 
-            <select>
-              <option selected disabled>Taille</option>
-              <option>XS</option>
-              <option>S</option>
-              <option>M</option>
-              <option>L</option>
-              <option>XL</option>
-            </select>
-          </div>
-          <div class="prix-quantite">
-            <div class="prix">$0</div>
-            <div class="quantite">
-              <select>
-                <option selected disabled>Quantité</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
+              <select name="size">
+                <option selected disabled>Taille</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
               </select>
             </div>
-          </div>
-          <button class="panier">Ajouter au panier</button>
+            <div class="prix-quantite">
+              <div class="prix" id="product-price"></div>
+              <div class="quantite">
+                <select id="quantity-select" name="quantity">
+                  <option selected disabled>Quantité</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+            </div>
+            <button class="panier" type="submit">Ajouter au panier</button>
+          </form>
           <div class="titre-info-supports open-sans-">
             Informations du support
           </div>
@@ -165,5 +160,6 @@
         </div>
       </div>
     </main>
+    <script type="module" src="../configProduct.js"></script>
   </body>
 </html>
