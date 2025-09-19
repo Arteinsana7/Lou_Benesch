@@ -1,7 +1,6 @@
-// cart.js - Gestionnaire de panier dynamique pour Lou Benesch
 class CartManager {
   constructor() {
-    this.cartKey = "lou-benesch-cart";
+    this.cartKey = "cart";
     this.cart = this.loadCart();
     this.init();
   }
@@ -263,11 +262,7 @@ class CartManager {
                 )}€</strong></td>
             `;
 
-      if (totalRow) {
-        cartTable.insertBefore(row, totalRow);
-      } else {
-        cartTable.appendChild(row);
-      }
+      cartTable.appendChild(row);
     });
 
     // Mettre à jour le total
