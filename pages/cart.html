@@ -9,7 +9,7 @@
 
     <title>Mon Panier</title>
   </head>
- <script src="../cart.js"></script>
+ <script src="./cart.js"></script>
   <body>
     <header id="navbar">
       <nav class="navbar desktop">
@@ -91,57 +91,20 @@
       <!-- rendre (items 4) dynamique -->
       <h1 class="open-sans-">Panier (i<span class="items">tems 3)</span></h1>
 
-      <table class="cart-table">
-        <tr class="cart-items-header">
-          <th>Produit</th>
-          <th>Prix</th>
-          <th>Qté</th>
-          <th>Total</th>
-        </tr>
-        <tr class="cart-items">
-          <td class="img-row">
-            <img
-              class="cart-img-product"
-              src="../assets/Illustration_1.png"
-              alt=""
-            />
-          </td>
-          <td>10.00€</td>
-          <td>2</td>
-          <td>20.00€</td>
-        </tr>
-        <tr class="cart-items">
-          <td class="img-row">
-            <img
-              class="cart-img-product"
-              src="../assets/Illustration_1.png"
-              alt=""
-            />
-          </td>
-          <td>15.00€</td>
-          <td>1</td>
-          <td>15.00€</td>
-        </tr>
-        <tr class="cart-items">
-          <td class="img-row">
-            <img
-              class="cart-img-product"
-              src="../assets/Illustration_1.png"
-              alt=""
-            />
-          </td>
-          <td>7.50€</td>
-          <td>3</td>
-          <td>22.50€</td>
-        </tr>
-        <tr class="cart-total">
-          <td colspan="3" style="text-align: right">
+     <table class="cart-table">
+    <tr class="cart-items-header">
+        <th>Produit</th>
+        <th>Prix</th>
+        <th>Qté</th>
+        <th>Total</th>
+    </tr>
+    <tr class="cart-total">
+        <td colspan="3" style="text-align: right">
             <strong>Total Général:</strong>
-          </td>
-          <!-- A rendre dynamique -->
-          <td>57.50€</td>
-        </tr>
-      </table>
+        </td>
+        <td>0.00€</td>
+    </tr>
+</table>
       <div class="checkout-container">
         <button class="checkout-button">Valider mon panier</button>
       </div>

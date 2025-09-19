@@ -108,14 +108,16 @@ function handleFormSubmit(event) {
   for (let i = 0; i < quantity; i++) {
     const supportType = support === "T-Shirt" ? "tshirt" : "agenda";
 
-    window.cartManager.addToCart(
-      currentProduct.id,
-      currentProduct.name,
-      currentProduct.image[0],
-      supportType,
-      size,
-      color
-    );
+    const product = {
+      name: currentProduct.name,
+      image: currentProduct.image[0],
+      support: support, // "T-Shirt" ou "Agenda"
+      color: color,
+      size: size,
+      quantity: 1,
+      price: support === "T-Shirt" ? 24.99 : 19.99,
+    };
+    window.cartManager.addToCart(product);
   }
 
   // Optionnel: rediriger vers le panier ou afficher un message de confirmation
