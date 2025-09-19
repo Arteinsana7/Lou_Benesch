@@ -1,37 +1,37 @@
 // agenda
 const agendaProducts = [
-  "../assets/produits/danse-agenda.jpg",
-  "../assets/produits/dress-agenda.jpg",
-  "../assets/produits/game-agenda.jpg",
-  "../assets/produits/kiss-agenda.jpg",
-  "../assets/produits/sing-agenda.jpg",
+  "./assets/produits/danse-agenda.jpg",
+  "./assets/produits/dress-agenda.jpg",
+  "./assets/produits/sing-agenda.jpg",
+  "./assets/produits/game-agenda.jpg",
+  "./assets/produits/kiss-agenda.jpg",
 ];
 
 //T-SHIRTS BLANCS
 const tshirtBlancProducts = [
-  "../assets/produits/danse-blanc.jpg",
-  "../assets/produits/dress-blanc.jpg",
-  "../assets/produits/game-blanc.jpg",
-  "../assets/produits/kiss-blanc.jpg",
-  "../assets/produits/sing-blanc.jpg",
+  "./assets/produits/danse-blanc.jpg",
+  "./assets/produits/dress-blanc.jpg",
+  "./assets/produits/sing-blanc.jpg",
+  "./assets/produits/game-blanc.jpg",
+  "./assets/produits/kiss-blanc.jpg",
 ];
 
 //T-SHIRTS NOIRS
 const tshirtNoirProducts = [
-  "../assets/produits/danse-noir.jpg",
-  "../assets/produits/dress-noir.jpg",
-  "../assets/produits/game-noir.jpg",
-  "../assets/produits/kiss-noir.jpg",
-  "../assets/produits/sing-noir.jpg",
+  "./assets/produits/danse-noir.jpg",
+  "./assets/produits/dress-noir.jpg",
+  "./assets/produits/sing-noir.jpg",
+  "./assets/produits/game-noir.jpg",
+  "./assets/produits/kiss-noir.jpg",
 ];
 
 //T-SHIRTS JAUNES
 const tshirtJauneProducts = [
-  "../assets/produits/danse-jaune.jpg",
-  "../assets/produits/dress-jaune.jpg",
-  "../assets/produits/game-jaune.jpg",
-  "../assets/produits/kiss-jaune.jpg",
-  "../assets/produits/sing-jaune.jpg",
+  "./assets/produits/danse-jaune.jpg",
+  "./assets/produits/dress-jaune.jpg",
+  "./assets/produits/sing-jaune.jpg",
+  "./assets/produits/game-jaune.jpg",
+  "./assets/produits/kiss-jaune.jpg",
 ];
 
 const products = [
@@ -87,9 +87,9 @@ const supports = {
 
 const variants = {
   tshirt: {
-    Noir: tshirtNoirProducts,
-    Blanc: tshirtBlancProducts,
-    Jaune: tshirtJauneProducts,
+    blanc: tshirtBlancProducts,
+    noir: tshirtNoirProducts,
+    jaune: tshirtJauneProducts,
   },
   agenda: {
     design: agendaProducts,

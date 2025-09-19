@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Configuration Produit - Lou Benesch</title>
 
-    <link rel="stylesheet" href="../styles/config-page.css" />
+
+
+    <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles/config-page.css" />
     <link rel="stylesheet" href="../mediaqueries.css" />
     <!-- On intègre des Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,8 +62,7 @@
                     <clipPath id="clip0_4_120">
                       <rect width="22" height="22" fill="white" />
                     </clipPath>
-                  </defs></svg
-              ></a>
+                  </defs></svg></a>
             </li>
           </ul>
         </nav>
@@ -121,11 +123,11 @@
                 <option value="Agenda">Agenda</option>
               </select>
 
-              <select name="color" required>
-                <option value="" selected disabled>Coloris</option>
-                <option value="Noir">Noir</option>
-                <option value="Blanc">Blanc</option>
-                <option value="Beige">Beige</option>
+              <select name="color">
+                <option selected disabled>Coloris</option>
+                <option>Blanc</option>
+                <option>Noir</option>
+                <option>Jaune</option>
               </select>
 
               <select name="size" required>
@@ -155,7 +157,13 @@
                 </select>
               </div>
             </div>
-            <button class="panier" type="submit">Ajouter au panier</button>
+            <button
+              class="add-to-cart-btn"
+              id="add-to-cart-button"
+              type="submit"
+            >
+              Ajouter au panier
+            </button>
           </form>
           <div class="titre-info-supports open-sans-">
             Informations du support
@@ -177,11 +185,11 @@
       </div>
     </main>
     
-    <!-- IMPORTANT: Charger cart.js AVANT configProduct.js -->
-  <script src="../cart.js"></script>
-<script type="module" src="../configProduct.js"></script>
+
+  <script type="module"  src="./cart.js"></script>
+  <script type="module" src="../configProduct.js"></script>
     <script>
-      // Afficher l'URL actuelle pour le debug
+
       document.addEventListener('DOMContentLoaded', function() {
         const urlElement = document.getElementById('current-url');
         if (urlElement) {
